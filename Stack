@@ -1,5 +1,46 @@
 AIM: Performing operations such as push and pop to insert or delete value in stack using stack operations.
 
+ALGORITHM:
+
+Step 1: Start
+Step 2: Declare variables stack_size, top, choice, item
+Step 3: Initialize top = -1
+Step 4: Read the value of stack_size
+Step 5: Declare an array stack of size stack_size
+
+Step 6: Repeat while choice ≠ 3
+  a. Display menu:
+   1 → Push
+   2 → Pop
+   3 → Exit
+  b. Read choice
+
+Push Operation (choice = 1)
+
+Step 7: If top == stack_size - 1
+  → Print “Stack Overflow”
+Else
+  → Read item
+  → Increment top
+  → Insert item into stack[top]
+  → Display the stack
+
+Pop Operation (choice = 2)
+
+Step 8: If top == -1
+  → Print “Stack Underflow”
+Else
+  → Remove element from stack[top]
+  → Decrement top
+  → Print removed element
+  → Display the stack
+
+Exit (choice = 3)
+
+Step 9: Terminate the program
+
+Step 10: Stop
+
 CODE:
 
 #include<stdio.h>
