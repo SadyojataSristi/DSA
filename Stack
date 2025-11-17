@@ -1,1 +1,55 @@
+AIM: Performing operations such as push and pop to insert or delete value in stack using stack operations.
 
+CODE:
+
+#include<stdio.h>
+
+void display(int stack[],int top){
+  printf("stack elements are:\n");
+  for(int i=0;i<=top;i++){
+    printf(">>%d",stack[i]);
+    }
+  printf("[top]-\n");
+}
+int main(){
+  int stack_size,top=-1,choice=0;
+  int item;
+  printf("Enter size of the stack:");
+  scanf("%d",&stack_size);
+  int stack[stack_size];
+  while(choice!=3){
+    printf("enter operation to perform\n1,Push\n2,Pop\n3,exit: ");
+    scanf("%d",&choice);
+    switch(choice){
+      case 1:
+      if(top==stack_size-1){
+        printf("stack overflow\n");
+       }
+      else{
+          printf("enter element to push: ");
+          scanf("%d",&item);
+        top=top+1;
+        stack[top]=item;
+      }
+      display(stack,top);
+      break;
+      case 2:
+      if(top==-1){
+        printf("Stack underflow\n");
+        }
+      else{
+        item=stack[top];
+        top=top-1;
+        printf("element %d is removed\n",item);
+        }
+        display(stack,top);
+        break;
+      case 3:
+      return 0;
+      break;
+      default:
+      printf("enter valid choice");
+      break;
+    }
+  }
+}
