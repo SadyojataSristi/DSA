@@ -1,5 +1,32 @@
 AIM: Find the postion of a element in an array using binary search in c.
 
+ALGORITHM:
+
+Step 1: Start
+Step 2: Declare variables n, key, start, mid, end, flag
+Step 3: Set flag = 0
+Step 4: Read value of n (number of elements)
+Step 5: Declare an array arr of size n
+Step 6: Input n elements in sorted order
+Step 7: Read the element key to search
+Step 8: Initialize:
+  start = 0
+  end = n - 1
+
+Step 9: Repeat while start ≤ end
+  a. Compute mid = (start + end) / 2
+  b. If arr[mid] == key
+    – Print the position mid + 1
+    – Set flag = 1
+    – Break the loop
+  c. Else if arr[mid] < key
+    – Set start = mid + 1
+  d. Else
+    – Set end = mid - 1
+
+Step 10: If flag == 0, print “Element not found”
+Step 11: Stop
+
 CODE:
 
 #include<stdio.h>
