@@ -1,5 +1,22 @@
 AIM: To find the position of a number using linear search operation in c.
 
+ALGORITHM:
+
+Step 1: Start
+Step 2: Declare variables n, key, flag
+Step 3: Set flag = 0
+Step 4: Read the value of n (number of elements)
+Step 5: Declare an array of size n
+Step 6: Input n elements into the array
+Step 7: Read the value of key (element to search)
+Step 8: Repeat for i = 0 to n - 1
+  • If arr[i] == key, then
+   – Set flag = 1
+   – Print the position i + 1
+   – Break the loop
+Step 9: If flag == 0, then print "Element not found"
+Step 10: Stop
+
 CODE:
 
 #include<stdio.h>
